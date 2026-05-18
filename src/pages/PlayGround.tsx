@@ -449,7 +449,16 @@ while (true) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', width: '100%', backgroundColor: '#0d1117', color: '#e6edf3', overflow: 'hidden' }}>
       <nav role="navigation" aria-label="Main navigation" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '52px', padding: '0 16px', backgroundColor: '#0d1117', borderBottom: '1px solid #30363d', flexShrink: 0, width: '100%' }}>
-        <button onClick={() => navigate('/')} style={{ background: 'none', border: 'none', fontWeight: 700, fontSize: '18px', color: '#e6edf3', cursor: 'pointer', padding: '0', margin: '0' }}>Sarvam</button>
+        <button onClick={() => {
+          setViewMode('single');
+          setOutputA('');
+          setOutputB('');
+          setDiffTokens([]);
+          setError(null);
+          setFrozenTokenCount(0);
+          setFrozenTokensPerSec(0);
+          navigate('/');
+        }} style={{ background: 'none', border: 'none', fontWeight: 700, fontSize: '18px', color: '#e6edf3', cursor: 'pointer', padding: '0', margin: '0' }}>Sarvam</button>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <button aria-label="Model selector" style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 12px', backgroundColor: '#161b22', border: '1px solid #30363d', borderRadius: '6px', color: '#e6edf3', cursor: 'pointer', fontSize: '14px' }}>
