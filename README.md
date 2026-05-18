@@ -2,6 +2,11 @@
 
 A modern, accessible React + TypeScript web application for testing and comparing LLM model outputs with real-time streaming, token-level diff visualization, and comprehensive error handling.
 
+
+🔗 Quick Links
+- **Demo Video** : https://www.loom.com/share/92dea7fe2cc74db6b8bc495cddd7303d
+- **Live Demo** : https://inferix-dev-portal.vercel.app/
+
 ## 🎯 Features
 
 ### Part A: Inference Playground
