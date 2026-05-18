@@ -1,13 +1,18 @@
 
-import './App.css'
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import InferencePlayground from './pages/playGround';
+import DiffPage from './pages/DiffPage';
 
 function App() {
-
   return (
-   <div className='text-6xl'>
-    Hello
-   </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<InferencePlayground />} />
+        <Route path="/diff" element={<DiffPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
