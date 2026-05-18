@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import InferencePlayground from './pages/playGround';
+import InferencePlayground from './pages/PlayGround';
 import DiffPage from './pages/DiffPage';
 
 function App() {
