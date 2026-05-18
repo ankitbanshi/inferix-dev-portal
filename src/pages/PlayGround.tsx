@@ -9,15 +9,15 @@ const MODEL_DIFF_A = 'llama-3.3-70b-versatile';
 const MODEL_DIFF_B = 'llama-3.3-70b-versatile';
 
 const STOP_WORDS = new Set([
-  'the', 'a', 'an', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
-  'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
-  'should', 'may', 'might', 'shall', 'can', 'need', 'dare', 'ought',
-  'used', 'to', 'of', 'in', 'on', 'at', 'by', 'for', 'with', 'about',
-  'against', 'between', 'into', 'through', 'during', 'before',
-  'after', 'above', 'below', 'from', 'up', 'down', 'out', 'off',
-  'over', 'under', 'again', 'then', 'once', 'and', 'but', 'or',
-  'nor', 'so', 'yet', 'both', 'either', 'neither', 'not', 'no',
-  'this', 'that', 'these', 'those', 'it', 'its', 'as', 'if', 'than',
+  // 'the', 'a', 'an', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
+  // 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
+  // 'should', 'may', 'might', 'shall', 'can', 'need', 'dare', 'ought',
+  // 'used', 'to', 'of', 'in', 'on', 'at', 'by', 'for', 'with', 'about',
+  // 'against', 'between', 'into', 'through', 'during', 'before',
+  // 'after', 'above', 'below', 'from', 'up', 'down', 'out', 'off',
+  // 'over', 'under', 'again', 'then', 'once', 'and', 'but', 'or',
+  // 'nor', 'so', 'yet', 'both', 'either', 'neither', 'not', 'no',
+  // 'this', 'that', 'these', 'those', 'it', 'its', 'as', 'if', 'than',
 ]);
 
 function stripMarkdown(text: string): string {
@@ -73,7 +73,6 @@ function diffWords(a: string, b: string) {
 const ModelIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M5 0a.5.5 0 0 1 .5.5V2h5V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-5v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0" /></svg>;
 const GridIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 2v2H2V2zm1 12v-2h2v2zm0-5v-2h2v2zm0-5v-2h2v2zm5 10v-2h2v2zm0-5v-2h2v2zm0-5v-2h2v2zM3 1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm5 0a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm5 0a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM3 6a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm5 0a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm5 0a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zM3 11a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zm5 0a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zm5 0a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1z" /></svg>;
 const ChevronDownIcon = () => <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 10L12 6" stroke="#8b949e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>;
-const StarIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.58 5.48l-.386 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 2.303 4.22l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" /></svg>;
 const MicIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5" /><path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3" /></svg>;
 const TrashIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm-9.022 1.025a.5.5 0 0 1 .498-.498h9.044a.5.5 0 0 1 .498.498l-.867 10.833A1 1 0 0 1 11.115 15H4.885a1 1 0 0 1-.995-1.134zM8 4.5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M10.5 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M5.5 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5" /></svg>;
 const CodeIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0" /></svg>;
@@ -81,8 +80,8 @@ const CodeIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height
 const InferencePlayground = () => {
   const [inputMode, setInputMode] = useState<'text' | 'audio'>('text');
   const [prompt, setPrompt] = useState('');
-  const [temperature, setTemperature] = useState(0.7);
-  const [maxTokens, setMaxTokens] = useState(1024);
+  const [temperature] = useState(0.7);
+  const [maxTokens] = useState(1024);
   const [currentModel] = useState('llama-3.3-70b-versatile');
   const [viewMode, setViewMode] = useState<ViewMode>('single');
   const [isStreamingSingle, setIsStreamingSingle] = useState(false);
@@ -90,13 +89,6 @@ const InferencePlayground = () => {
   const [outputA, setOutputA] = useState('');
   const [outputB, setOutputB] = useState('');
   const [diffTokens, setDiffTokens] = useState<DiffToken[]>([]);
-  const [latencyMs, setLatencyMs] = useState(0);
-  const [tempDropdownOpen, setTempDropdownOpen] = useState(false);
-  const [maxTokensDropdownOpen, setMaxTokensDropdownOpen] = useState(false);
-  const [showMetrics, setShowMetrics] = useState(false);
-  const [showFeedback, setShowFeedback] = useState(false);
-  const [feedbackSent, setFeedbackSent] = useState(false);
-  const [selectedFeedback, setSelectedFeedback] = useState<string | null>(null);
   const [showViewCode, setShowViewCode] = useState(false);
   const [recordingTime, setRecordingTime] = useState(0);
   const [lastPrompt, setLastPrompt] = useState('');
@@ -111,8 +103,6 @@ const InferencePlayground = () => {
   const mainContentRef = useRef<HTMLDivElement>(null);
   const diffSectionRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
-  const tempDropdownRef = useRef<HTMLDivElement>(null);
-  const maxTokensDropdownRef = useRef<HTMLDivElement>(null);
   const recordingIntervalRef = useRef<any>(null);
 
   const selectedTemperature = temperature;
@@ -142,22 +132,6 @@ const InferencePlayground = () => {
       mainContentRef.current.scrollTop = mainContentRef.current.scrollHeight;
     }
   }, [outputA, outputB, diffTokens]);
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (tempDropdownRef.current && !tempDropdownRef.current.contains(e.target as Node)) {
-        setTempDropdownOpen(false);
-      }
-      if (maxTokensDropdownRef.current && !maxTokensDropdownRef.current.contains(e.target as Node)) {
-        setMaxTokensDropdownOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  const tempLabel = temperature === 0.7 ? 'Auto' : temperature === 1.0 ? 'Creative' : 'Precise';
-  const maxTokensLabel = maxTokens === 1024 ? 'Default' : maxTokens === 256 ? 'Short' : 'Long';
 
   const markdownComponents = {
     p: ({ children }: any) => <p style={{ margin: '0 0 12px', lineHeight: '1.7', color: '#e6edf3' }}>{children}</p>,
@@ -267,7 +241,6 @@ const InferencePlayground = () => {
       setOutputB('');
       setDiffTokens([]);
       const startTime = Date.now();
-      setLatencyMs(0);
       setIsStreamingSingle(true);
       let totalTokens = 0;
 
@@ -286,19 +259,17 @@ const InferencePlayground = () => {
       } finally {
         setIsStreamingSingle(false);
         const endTime = Date.now() - startTime;
-        setLatencyMs(endTime);
         setFrozenTokenCount(totalTokens);
         setFrozenTokensPerSec(totalTokens > 0 ? Math.round((totalTokens / (endTime / 1000))) : 0);
       }
       return;
     }
 
-    setViewMode('compare');
+    // Compare mode: run both models in parallel
     setOutputA('');
     setOutputB('');
     setDiffTokens([]);
     const compareStart = Date.now();
-    setLatencyMs(0);
     setIsComparing(true);
 
     let finalOutputA = '';
@@ -340,7 +311,6 @@ const InferencePlayground = () => {
     } finally {
       setIsComparing(false);
       const endTime = Date.now() - compareStart;
-      setLatencyMs(endTime);
       setFrozenTokenCount(totalTokens);
       setFrozenTokensPerSec(totalTokens > 0 ? Math.round((totalTokens / (endTime / 1000))) : 0);
     }
@@ -375,8 +345,6 @@ const InferencePlayground = () => {
     setOutputA('');
     setOutputB('');
     setDiffTokens([]);
-    setFeedbackSent(false);
-    setSelectedFeedback(null);
     setViewMode('single');
   };
 
@@ -384,7 +352,7 @@ const InferencePlayground = () => {
     if (!content && !isStreaming) {
       return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', height: '100%' }}>
-          <h1 style={{ fontSize: '24px', fontWeight: '600', color: 'white' }}>Welcome to Inferix Playground</h1>
+          <h1 style={{ fontSize: '24px', fontWeight: '600', color: 'white' }}>Welcome to Sarvam Playground</h1>
           <p style={{ color: '#8b949e', marginTop: '8px', fontSize: '14px' }}>Test on-device inference across model versions</p>
         </div>
       );
@@ -448,7 +416,7 @@ while (true) {
   }
 
   const renderCompareTopPanels = (showBadges: boolean) => (
-    <div style={{ display: 'flex', flex: '0 0 65%', minHeight: 0, overflow: 'hidden', borderBottom: '1px solid #30363d' }}>
+    <div style={{ display: 'flex', flex: isComparing ? '0 0 65%' : 1, minHeight: 0, overflow: 'hidden', borderBottom: isComparing ? '1px solid #30363d' : 'none' }}>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', minHeight: 0 }}>
         <div style={{ padding: '8px 16px', background: '#161b22', borderBottom: '1px solid #30363d', fontSize: '11px', color: '#8b949e', display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
           <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#f85149', display: 'inline-block' }} />
@@ -488,7 +456,7 @@ while (true) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', width: '100%', backgroundColor: '#0d1117', color: '#e6edf3', overflow: 'hidden' }}>
       <nav role="navigation" aria-label="Main navigation" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '52px', padding: '0 16px', backgroundColor: '#0d1117', borderBottom: '1px solid #30363d', flexShrink: 0, width: '100%' }}>
-        <span style={{ fontWeight: 700, fontSize: '18px', color: '#e6edf3' }}>Inferix</span>
+        <span style={{ fontWeight: 700, fontSize: '18px', color: '#e6edf3' }}>Sarvam</span>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <button aria-label="Model selector" style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 12px', backgroundColor: '#161b22', border: '1px solid #30363d', borderRadius: '6px', color: '#e6edf3', cursor: 'pointer', fontSize: '14px' }}>
@@ -499,7 +467,15 @@ while (true) {
           <button
             aria-label={viewMode === 'single' ? 'Switch to compare mode' : 'Switch to single mode'}
             aria-pressed={viewMode !== 'single'}
-            onClick={() => setViewMode(viewMode === 'single' ? 'compare' : 'single')}
+            onClick={() => {
+              setViewMode(viewMode === 'single' ? 'compare' : 'single');
+              setOutputA('');
+              setOutputB('');
+              setDiffTokens([]);
+              setFrozenTokenCount(0);
+              setFrozenTokensPerSec(0);
+              setError(null);
+            }}
             style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 12px', backgroundColor: viewMode !== 'single' ? '#1d6fa5' : '#161b22', border: '1px solid #30363d', borderRadius: '6px', color: '#e6edf3', cursor: 'pointer', fontSize: '14px' }}
           >
             <GridIcon />
@@ -511,83 +487,16 @@ while (true) {
       </nav>
 
       <div style={{ display: 'flex', flexDirection: 'column', flex: 1, overflow: 'hidden' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '16px 24px', flexShrink: 0, borderBottom: '1px solid #30363d' }}>
-          <div style={{ position: 'relative' }} ref={tempDropdownRef}>
-            <button
-              aria-haspopup="listbox"
-              aria-expanded={tempDropdownOpen}
-              aria-label="Temperature setting"
-              onClick={() => setTempDropdownOpen(!tempDropdownOpen)}
-              style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 12px', fontSize: '12px', backgroundColor: '#161b22', border: '1px solid #30363d', borderRadius: '9999px', color: '#e6edf3', cursor: 'pointer' }}
-            >
-              <StarIcon />
-              <span>{tempLabel}</span>
-              {temperature !== 0.7 && <span style={{ width: '6px', height: '6px', background: '#2563eb', borderRadius: '50%', display: 'inline-block', marginLeft: '4px' }} />}
-              <ChevronDownIcon />
-            </button>
-            {tempDropdownOpen && (
-              <ul role="listbox" aria-label="Temperature options" style={{ position: 'absolute', top: '100%', left: 0, marginTop: '4px', backgroundColor: '#161b22', border: '1px solid #30363d', borderRadius: '6px', zIndex: 10, listStyle: 'none', padding: 0, margin: 0 }}>
-                {[
-                  { label: 'Auto', value: 0.7 },
-                  { label: 'Creative', value: 1.0 },
-                  { label: 'Precise', value: 0.2 },
-                ].map(opt => (
-                  <li key={opt.value} role="option" aria-selected={temperature === opt.value}>
-                    <button
-                      onClick={() => {
-                        setTemperature(opt.value);
-                        setTempDropdownOpen(false);
-                      }}
-                      style={{ display: 'block', width: '100%', textAlign: 'left', padding: '8px 12px', fontSize: '12px', backgroundColor: temperature === opt.value ? '#1d6fa5' : 'transparent', color: '#e6edf3', border: 'none', cursor: 'pointer' }}
-                    >
-                      {opt.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-
-          <div style={{ position: 'relative' }} ref={maxTokensDropdownRef}>
-            <button
-              aria-haspopup="listbox"
-              aria-expanded={maxTokensDropdownOpen}
-              aria-label="Max tokens setting"
-              onClick={() => setMaxTokensDropdownOpen(!maxTokensDropdownOpen)}
-              style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 12px', fontSize: '12px', backgroundColor: '#161b22', border: '1px solid #30363d', borderRadius: '9999px', color: '#e6edf3', cursor: 'pointer' }}
-            >
-              <span>{maxTokensLabel}</span>
-              {maxTokens !== 1024 && <span style={{ width: '6px', height: '6px', background: '#2563eb', borderRadius: '50%', display: 'inline-block', marginLeft: '4px' }} />}
-              <ChevronDownIcon />
-            </button>
-            {maxTokensDropdownOpen && (
-              <ul role="listbox" aria-label="Max tokens options" style={{ position: 'absolute', top: '100%', left: 0, marginTop: '4px', backgroundColor: '#161b22', border: '1px solid #30363d', borderRadius: '6px', zIndex: 10, listStyle: 'none', padding: 0, margin: 0 }}>
-                {[
-                  { label: 'Short', value: 256 },
-                  { label: 'Default', value: 1024 },
-                  { label: 'Long', value: 4096 },
-                ].map(opt => (
-                  <li key={opt.value} role="option" aria-selected={maxTokens === opt.value}>
-                    <button
-                      onClick={() => {
-                        setMaxTokens(opt.value);
-                        setMaxTokensDropdownOpen(false);
-                      }}
-                      style={{ display: 'block', width: '100%', textAlign: 'left', padding: '8px 12px', fontSize: '12px', backgroundColor: maxTokens === opt.value ? '#1d6fa5' : 'transparent', color: '#e6edf3', border: 'none', cursor: 'pointer' }}
-                    >
-                      {opt.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </div>
-
         <div ref={mainContentRef} style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', minHeight: 0, backgroundColor: '#0d1117' }} role="log" aria-live="polite" aria-label="Model output" aria-atomic="false">
           {viewMode === 'single' && <div style={{ flex: 1, overflowY: 'auto', minHeight: 0, padding: '24px' }} className="output-panel">{renderOutput(outputA, isStreamingSingle)}</div>}
 
-          {viewMode === 'compare' && (
+          {viewMode === 'compare' && !isComparing && (
+            <div style={{ display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden', minHeight: 0 }}>
+              {renderCompareTopPanels(false)}
+            </div>
+          )}
+
+          {viewMode === 'compare' && isComparing && (
             <div style={{ display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden', minHeight: 0 }}>
               {renderCompareTopPanels(false)}
               <div style={{ flex: '0 0 35%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px', color: '#8b949e', fontSize: '13px' }}>
@@ -634,97 +543,6 @@ while (true) {
             </div>
           )}
         </div>
-
-        {showMetrics && (
-          <div style={{ margin: '0 24px 8px', background: '#161b22', border: '1px solid #30363d', borderRadius: '8px', overflow: 'hidden', flexShrink: 0 }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 16px', borderBottom: '1px solid #30363d' }}>
-              <span style={{ fontSize: '11px', color: '#8b949e', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                Live Metrics
-              </span>
-              <button onClick={() => setShowMetrics(false)} aria-label="Close metrics panel" style={{ background: 'none', border: 'none', color: '#8b949e', cursor: 'pointer', fontSize: '18px', lineHeight: 1, padding: '0 2px' }}>
-                ×
-              </button>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
-              {[
-                { label: 'TOKENS', value: frozenTokenCount.toString(), color: '#e6edf3' },
-                { label: 'TOKENS / SEC', value: frozenTokensPerSec.toFixed(1), color: '#3fb950' },
-                { label: 'LATENCY', value: latencyMs + 'ms', color: '#e6edf3' },
-                { label: 'MODEL', value: currentModel, color: '#79c0ff' },
-              ].map((m, i) => (
-                <div key={i} style={{ padding: '16px', borderRight: i < 3 ? '1px solid #30363d' : 'none' }}>
-                  <div style={{ fontSize: '10px', color: '#8b949e', marginBottom: '6px', letterSpacing: '0.08em' }}>
-                    {m.label}
-                  </div>
-                  <div style={{ fontSize: '22px', fontWeight: 600, color: m.color, fontFamily: 'monospace' }}>
-                    {m.value}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {showFeedback && (
-          <div style={{ margin: '0 24px 8px', background: '#161b22', border: '1px solid #30363d', borderRadius: '8px', overflow: 'hidden', flexShrink: 0 }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 16px', borderBottom: '1px solid #30363d' }}>
-              <span style={{ fontSize: '11px', color: '#8b949e', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                Rate this response
-              </span>
-              <button
-                onClick={() => {
-                  setShowFeedback(false);
-                  setFeedbackSent(false);
-                  setSelectedFeedback(null);
-                }}
-                aria-label="Close feedback panel"
-                style={{ background: 'none', border: 'none', color: '#8b949e', cursor: 'pointer', fontSize: '18px', lineHeight: 1, padding: '0 2px' }}
-              >
-                ×
-              </button>
-            </div>
-            <div style={{ padding: '16px' }}>
-              {!feedbackSent ? (
-                <>
-                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '12px' }}>
-                    {[
-                      { label: '👍 Helpful', value: 'helpful' },
-                      { label: '👎 Not helpful', value: 'not-helpful' },
-                      { label: '⚡ Too slow', value: 'slow' },
-                      { label: '🎯 Inaccurate', value: 'inaccurate' },
-                      { label: '✨ Excellent', value: 'excellent' },
-                    ].map(item => (
-                      <button
-                        key={item.value}
-                        onClick={() => setSelectedFeedback(item.value)}
-                        style={{ background: selectedFeedback === item.value ? '#21262d' : 'transparent', border: selectedFeedback === item.value ? '1px solid #2563eb' : '1px solid #30363d', borderRadius: '6px', padding: '6px 14px', color: selectedFeedback === item.value ? '#e6edf3' : '#8b949e', fontSize: '12px', cursor: 'pointer', transition: 'all 0.15s ease' }}
-                      >
-                        {item.label}
-                      </button>
-                    ))}
-                  </div>
-                  <textarea
-                    placeholder="Additional comments (optional)..."
-                    rows={2}
-                    style={{ width: '100%', background: '#0d1117', border: '1px solid #30363d', borderRadius: '6px', padding: '8px 12px', color: '#e6edf3', fontSize: '12px', resize: 'none', marginBottom: '10px', boxSizing: 'border-box', fontFamily: 'inherit' }}
-                  />
-                  <button
-                    onClick={() => selectedFeedback && setFeedbackSent(true)}
-                    disabled={!selectedFeedback}
-                    style={{ background: selectedFeedback ? '#2563eb' : '#21262d', border: 'none', borderRadius: '6px', padding: '6px 16px', color: selectedFeedback ? '#fff' : '#484f58', fontSize: '12px', cursor: selectedFeedback ? 'pointer' : 'not-allowed', transition: 'all 0.15s ease' }}
-                  >
-                    Submit feedback
-                  </button>
-                </>
-              ) : (
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#3fb950', fontSize: '13px' }}>
-                  <span style={{ fontSize: '16px' }}>✓</span>
-                  Thanks for your feedback! It helps improve the models.
-                </div>
-              )}
-            </div>
-          </div>
-        )}
 
         <div style={{ padding: '16px 24px', backgroundColor: 'transparent', flexShrink: 0, borderTop: '1px solid #30363d', overflow: 'auto' }}>
           {error && (
@@ -799,26 +617,6 @@ while (true) {
                 }}
               >
                 {viewMode === 'compare' && isComparing ? 'Generating...' : 'Diff View'}
-              </button>
-              <span>·</span>
-              <button
-                onClick={() => {
-                  setShowFeedback(!showFeedback);
-                  setShowMetrics(false);
-                }}
-                style={{ backgroundColor: 'transparent', border: 'none', color: showFeedback ? '#e6edf3' : '#8b949e', cursor: 'pointer' }}
-              >
-                Feedback
-              </button>
-              <span>·</span>
-              <button
-                onClick={() => {
-                  setShowMetrics(!showMetrics);
-                  setShowFeedback(false);
-                }}
-                style={{ backgroundColor: 'transparent', border: 'none', color: showMetrics ? '#e6edf3' : '#8b949e', cursor: 'pointer' }}
-              >
-                Metrics
               </button>
             </div>
 

@@ -642,6 +642,3 @@ All code is clean, well-documented, and ready for production deployment.
 
 ---
 
-*This PDF was generated from the consolidated submission document.*
-*All links are clickable in the PDF viewer.*
-*For the most up-to-date information, refer to the GitHub repository.*
