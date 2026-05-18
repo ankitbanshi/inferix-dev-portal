@@ -234,25 +234,7 @@ const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
 - Obvious what each control does
 - Feedback immediately visible
 
-## Testing Methodology
 
-### 1. Automated Testing (Recommended)
-- axe DevTools browser extension
-- WAVE Web Accessibility Evaluation Tool
-- Lighthouse accessibility audit
-- Pa11y command-line tool
-
-### 2. Manual Testing
-- Keyboard-only navigation
-- Screen reader testing (NVDA, JAWS, VoiceOver)
-- Zoom testing to 200%
-- High contrast mode testing
-- Color blindness simulation
-
-### 3. User Testing
-- Test with actual users with disabilities
-- Gather feedback on usability
-- Iterate based on user suggestions
 
 ## Browser and Assistive Technology Support
 
@@ -299,4 +281,3 @@ const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
 
 **Inferix Playground v1.0 is committed to being accessible to all users, regardless of disability.** This implementation follows WCAG 2.1 Level AA standards and best practices for web accessibility. We actively test and improve accessibility continuously.
 
-For accessibility issues or feedback, please report through the feedback mechanism in the application.

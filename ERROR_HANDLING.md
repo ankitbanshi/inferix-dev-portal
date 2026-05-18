@@ -449,26 +449,3 @@ const response = { ok: false, status: 401 };
 // Pause stream after N tokens
 ```
 
-## Error Handling Best Practices Applied
-
-✓ **Fail gracefully**: Show errors without crashing
-✓ **Preserve state**: Keep partial data on failure
-✓ **Provide feedback**: Clear error messages
-✓ **Enable recovery**: Multiple ways to recover
-✓ **Prevent cascades**: Validate before operations
-✓ **Log efficiently**: Debug info without user confusion
-✓ **User-friendly**: Non-technical language
-✓ **Accessible**: Color + text, screen reader friendly
-✓ **Consistent**: Similar errors handled similarly
-✓ **Resilient**: Handle edge cases gracefully
-
-## Future Enhancements
-
-1. Automatic retry with exponential backoff
-2. Error tracking/reporting to backend
-3. Specific error codes with recovery links
-4. Offline mode with local storage
-5. Error analytics dashboard
-6. Proactive health checks
-7. Better speech recognition error messages
-8. Streaming timeout adjustment UI

@@ -9,15 +9,7 @@ const MODEL_DIFF_A = 'llama-3.3-70b-versatile';
 const MODEL_DIFF_B = 'llama-3.3-70b-versatile';
 
 const STOP_WORDS = new Set([
-  // 'the', 'a', 'an', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
-  // 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
-  // 'should', 'may', 'might', 'shall', 'can', 'need', 'dare', 'ought',
-  // 'used', 'to', 'of', 'in', 'on', 'at', 'by', 'for', 'with', 'about',
-  // 'against', 'between', 'into', 'through', 'during', 'before',
-  // 'after', 'above', 'below', 'from', 'up', 'down', 'out', 'off',
-  // 'over', 'under', 'again', 'then', 'once', 'and', 'but', 'or',
-  // 'nor', 'so', 'yet', 'both', 'either', 'neither', 'not', 'no',
-  // 'this', 'that', 'these', 'those', 'it', 'its', 'as', 'if', 'than',
+  'the',
 ]);
 
 function stripMarkdown(text: string): string {
