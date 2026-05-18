@@ -42,12 +42,18 @@ npm install
 
 ### 2. Configure Environment Variables
 ```bash
-# Copy example env file
-cp ../.env.example ../.env
+# Copy the environment example file
+cp .env.example .env
 
-# Edit ../.env and add your Groq API key
-VITE_GROQ_API_KEY=your_api_key_here
+# Edit .env and add your Groq API key
+# VITE_GROQ_API_KEY=your_api_key_here
 ```
+
+**Get your Groq API key:**
+1. Go to https://console.groq.com/keys
+2. Sign in or create an account
+3. Copy your API key
+4. Paste it in `.env` file: `VITE_GROQ_API_KEY=your_key_here`
 
 ### 3. Run Development Server
 ```bash
@@ -60,6 +66,8 @@ Open http://localhost:5173 in your browser.
 ```bash
 npm run build
 ```
+
+The optimized build will be in the `dist/` folder.
 
 ## 📖 Documentation
 
